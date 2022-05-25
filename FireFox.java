@@ -8,7 +8,15 @@ public class FireFox {
        System.setProperty("webdriver.firefox.marionette","C:\\Users\\sanju\\IdeaProjects\\Software\\Driver\\geckodriver.exe");
         WebDriver we = new FirefoxDriver();
         we.get("https://demo.nopcommerce.com/");
-        we.getTitle();
+        String Title = we.getTitle();
+        System.out.println("Page title is:" + Title);
+        String url = we.getCurrentUrl();
+        System.out.println(url);
+        we.manage().window().maximize();
+        we.navigate().refresh();
+        we.navigate().forward();
+        we.close();
+
 
     }
 

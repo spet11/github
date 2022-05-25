@@ -9,7 +9,14 @@ public class WebDriverEdge {
         System.setProperty("webdriver.edge.driver","C:\\Users\\sanju\\IdeaProjects\\Software\\Driver\\msedgedriver.exe" );
         WebDriver web = new EdgeDriver();
         web.get("https://demo.nopcommerce.com/");
-        web.getTitle();
-        web.getCurrentUrl();
+        String title = web.getTitle();
+        System.out.println("Page Title is :" + title);
+        String url = web.getCurrentUrl();
+        System.out.println(url);
+        web.manage().window().fullscreen();
+        web.navigate().refresh();
+        web.close();
+
+
     }
 }

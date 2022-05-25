@@ -14,16 +14,8 @@ public class WebDriverConcept {
         driver.manage().window().maximize();
         String title= driver.getTitle();
         System.out.println("Page title is: " + title);
+      driver.close();
 
-
-
-
-
-
-        //driver.close();
-       // driver.getTitle();
-
-        //driver.getWindowHandle();
 
 
 
